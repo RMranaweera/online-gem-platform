@@ -12,21 +12,24 @@ import Profile from "./components/Profile";
 import BoardUser from "./components/BoardUser";
 import BoardModerator from "./components/BoardModerator";
 import BoardAdmin from "./components/BoardAdmin";
+import AddBid from "./components/AddBid";
+import Content from "./components/Content";
+import AddGem from "./components/AddGem";
 
 const App = () => {
   const [showModeratorBoard, setShowModeratorBoard] = useState(false);
   const [showAdminBoard, setShowAdminBoard] = useState(false);
   const [currentUser, setCurrentUser] = useState(undefined);
 
-  useEffect(() => {
-    const user = AuthService.getCurrentUser();
+  // useEffect(() => {
+  //   const user = AuthService.getCurrentUser();
 
-    if (user) {
-      setCurrentUser(user);
-      setShowModeratorBoard(user.roles.includes("ROLE_MODERATOR"));
-      setShowAdminBoard(user.roles.includes("ROLE_ADMIN"));
-    }
-  }, []);
+  //   if (user) {
+  //     setCurrentUser(user);
+  //     setShowModeratorBoard(user.roles.includes("ROLE_MODERATOR"));
+  //     setShowAdminBoard(user.roles.includes("ROLE_ADMIN"));
+  //   }
+  // }, []);
 
   const logOut = () => {
     AuthService.logout();
@@ -36,11 +39,8 @@ const App = () => {
     <div>
       <nav className="navbar navbar-expand navbar-dark bg-dark">
         <Link to={"/"} className="navbar-brand">
-        <img
-          src="favinco2.png"
-          alt="Logo-img"
-        />
-           Gemicstore 
+          <img src="favinco2.png" alt="Logo-img" />
+          Gemicstore
         </Link>
         <div className="navbar-nav mr-auto">
           <li className="nav-item">
@@ -106,13 +106,16 @@ const App = () => {
 
       <div className="container mt-3">
         <Routes>
-          <Route exact path="/home" element={<Home/>} />
-          <Route exact path="/login" element={<Login/>} />
-          <Route exact path="/register" element={<Register/>} />
-          <Route exact path="/profile" element={<Profile/>} />
-          <Route path="/user" element={<BoardUser/>} />
-          <Route path="/mod" element={<BoardModerator/>} />
-          <Route path="/admin" element={<BoardAdmin/>} />
+          {/* <Route exact path="/home" element={<Home />} /> */}
+          <Route exact path="/login" element={<Login />} />
+          <Route exact path="/register" element={<Register />} />
+          <Route exact path="/profile" element={<Profile />} />
+          <Route path="/user" element={<BoardUser />} />
+          <Route path="/mod" element={<BoardModerator />} />
+          <Route path="/admin" element={<BoardAdmin />} />
+          <Route path="/addBid/:id" element={<AddBid />} />
+          <Route path="/home" element={<Content />} />
+          <Route path="/addGem" element={<AddGem />} />
         </Routes>
       </div>
     </div>
@@ -120,4 +123,3 @@ const App = () => {
 };
 
 export default App;
-

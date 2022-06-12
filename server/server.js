@@ -25,7 +25,8 @@ var app = express();
 
 app.use(cors());
 
-app.use('/add/document', express.static(path.join('documents')));
+app.use("/gems", express.static(path.join("gems")));
+app.use("/documents", express.static(path.join("documents")));
 //Body-Parser Middleware
 app.use(express.json());
 app.use(
@@ -57,4 +58,3 @@ app.use(router);
 app.listen(port, function () {
   console.log("Server is running on port " + port);
 });
-
