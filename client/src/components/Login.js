@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
 import CheckButton from "react-validation/build/button";
+import Navbar from "./Navbar/Nav"
 
 import AuthService from "../services/auth.service";
 import { required } from "./required";
@@ -57,7 +58,8 @@ const Login = (props) => {
   };
 
   return (
-    
+    <div>
+      <Navbar/>
     <div className="col-md-12">
       <div className="card card-container">
         <img 
@@ -112,6 +114,7 @@ const Login = (props) => {
         </Form>
       </div>
     </div>
+  </div>
   );
 };
 

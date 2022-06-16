@@ -17,9 +17,6 @@ module.exports = {
      
       });
 
-     
-        
-            
           
             userData.save((err, doc) => {
               if (!err) {
@@ -32,7 +29,7 @@ module.exports = {
               } else {
                 res.json({
                   success: false,
-                  message: "*** Student register failed ***",
+                  message: "*** User register failed ***",
                 });
               }
             });
