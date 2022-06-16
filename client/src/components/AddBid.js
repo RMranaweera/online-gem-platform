@@ -177,7 +177,7 @@ const AddBid = () => {
               <div class="row text-center">
                 <div class="col-sm-12 col-md-12 mb-4">
                   <h3 class="text-center mt-4 text-secondary">
-                    Hurry Up ! Bid Sooon ....!
+                    Hurry Up ! Bid Soon ....!
                   </h3>
                 </div>
 
