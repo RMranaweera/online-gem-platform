@@ -1,10 +1,16 @@
 import React from 'react'
 import NavBar from './Navbar/Nav'
+import SideBar from "./AppSidebar"
+import SideNavBar from "./SideBar/SideNavbar"
 function AdminBoard() {
   return (
     <div>
       <NavBar/>
-      <h1>this is admin board</h1>
+      <div className='sideNavBar-container'>
+      <SideNavBar/>
+      </div>
+   
+      
     </div>
   )
 }
