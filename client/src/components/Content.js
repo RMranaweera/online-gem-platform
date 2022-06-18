@@ -215,6 +215,8 @@ function Content() {
                         {" "}
                         <a href={gem.documentPath}>
                           <button className="btn btn-primary">View</button>
+
+                          
                         </a>
                       </div>
                     </div>

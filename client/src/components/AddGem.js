@@ -91,10 +91,11 @@ const AddGem = () => {
                   <option value="Amethyst">Amethyst</option>
 
                   <option value="Alexandrite">Alexandrite</option>
-                  <option value="Nil Gem">Nil Gem</option>
+                  <option value="Nil Gem">Blue Gem</option>
                   <option value="Purple Gem">Purple Gem</option>
                   <option value="Red Gem">Red Gem</option>
                   <option value="Yellow Gem">Yellow Gem</option>
+                  <option value="Yellow Gem">Other</option>
                 </Field>
               </div>
               <div>
@@ -107,10 +108,11 @@ const AddGem = () => {
                   <option value="Black">Black</option>
 
                   <option value="Green">Green</option>
-                  <option value="Nil ">Nil </option>
+                  <option value="Nil ">Blue </option>
                   <option value="Purple ">Purple</option>
                   <option value="Red ">Red </option>
                   <option value="Yellow ">Yellow </option>
+                  <option value="Yellow ">Other </option>
                 </Field>
               </div>
               <div className="mt-3">

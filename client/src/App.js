@@ -116,6 +116,7 @@ const App = () => {
           <Route path="/addBid/:id" element={<AddBid />} />
           <Route path="/home" element={<Content />} />
           <Route path="/addGem" element={<AddGem />} />
+          <Route path="/dash" element={<dash/>} />
         </Routes>
       </div>
     </div>
