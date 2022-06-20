@@ -6,43 +6,43 @@ import * as IoIcons from 'react-icons/io';
 export const SidebarData = [
   {
     title: 'Dashboard',
-    path: '/',
+    path: '/dashboard',
     icon: <AiIcons.AiOutlineDashboard />,
     cName: 'nav-text'
   },
   {
     title: 'Seller',
-    path: '/reports',
+    path: '/seller',
     icon: <AiIcons.AiOutlineUser />,
     cName: 'nav-text'
   },
   {
     title: 'Buyer',
-    path: '/products',
+    path: '/buyer',
     icon: <IoIcons.IoMdPeople/>,
     cName: 'nav-text'
   },
   {
     title: 'Driver',
-    path: '/team',
+    path: '/driver',
     icon: <FaIcons.FaShuttleVan />,
     cName: 'nav-text'
   },
   {
     title: 'Gem Bureau Agent',
-    path: '/messages',
+    path: '/gbagent',
     icon: <FaIcons.FaUserTie />,
     cName: 'nav-text'
   },
   {
     title: 'Feedback',
-    path: '/support',
+    path: '/',
     icon: <AiIcons.AiOutlineMessage/>,
     cName: 'nav-text'
   },
   {
     title: 'Sign Out',
-    path: '/support',
+    path: '/',
     icon: <AiIcons.AiOutlineLogout />,
     cName: 'nav-text'
   }

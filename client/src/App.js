@@ -16,6 +16,12 @@ import AddBid from "./components/AddBid";
 import Content from "./components/Content";
 import AddGem from "./components/AddGem";
 import AdminBoard from "./components/AdminBoard";
+import Dashboard from "./components/Admin/Dashboard"
+import Buyer from "./components/Admin/Buyer";
+import Seller from "./components/Admin/Seller";
+import Driver from "./components/Admin/Driver";
+import GBAgent from "./components/Admin/GBAgent";
+import LandingPage from "./components/LandingPage";
 
 const App = () => {
 
@@ -23,7 +29,8 @@ const App = () => {
   return (
     <div>
         <Routes>
-          {/* <Route exact path="/home" element={<Home />} /> */}
+          <Route exact path="/" element={<LandingPage/>}/>
+          <Route exact path="/home" element={<Home />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/register" element={<Register />} />
           <Route exact path="/profile" element={<Profile />} />
@@ -34,6 +41,11 @@ const App = () => {
           <Route path="/home" element={<Content />} />
           <Route path="/addGem" element={<AddGem />} />
           <Route path="/adminBoard" element={<AdminBoard/>}/>
+          <Route path="/buyer" element={<Buyer/>}/>
+          <Route path="/dashboard" element={<Dashboard/>}/>
+          <Route path="/driver" element={<Driver/>}/>
+          <Route path="/gbagent" element={<GBAgent/>}/>
+          <Route path="/seller" element={<Seller/>}/>
         </Routes>
     </div>
   );
