@@ -100,7 +100,7 @@ const vphoneno = (value) => {
   }
 };
 const vnic = (value) => {
-  if (value.length > 11 || value.length <13) {
+  if (value.length <10 || value.length >12) {
     return (
       <div className="alert alert-danger" role="alert">
         The NIC must be 10/12 charactors

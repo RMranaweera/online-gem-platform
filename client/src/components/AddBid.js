@@ -68,105 +68,111 @@ const AddBid = () => {
           onSubmit={handleSubmit}
         >
           {({ isSubmitting, values }) => (
-            <Form>
-              {gemData?.map((gem, index) => {
-                const deadline =
-                  new Date(gem.endTime).getTime() -
-                  (10 * 60 * 60 * 24 * 2 + 1000 * 30);
+            <center>
+              <Form>
+                {gemData?.map((gem, index) => {
+                  const deadline =
+                    new Date(gem.endTime).getTime() -
+                    (10 * 60 * 60 * 24 * 2 + 1000 * 30);
 
-                if (gem._id == id) {
-                  return (
-                    <div class="col-md-4 mt-3">
-                      <div class="testimonial mb-5">
-                        <div class="avatar mx-auto">
-                          <img
-                            src={gem.imagePath}
-                            class="rounded-circle z-depth-1 img-fluid"
-                            width="400px"
-                            height="300px"
-                          />
+                  if (gem._id == id) {
+                    return (
+                      <div class="col-md-4 mt-3">
+                        <div class="testimonial mb-5">
+                          <div class="avatar mx-auto">
+                            <img
+                              src={gem.imagePath}
+                              class="rounded-circle z-depth-1 img-fluid"
+                              width="400px"
+                              height="300px"
+                            />
+                          </div>
+                          <h4 class="font-weight-bold dark-grey-text mt-4">
+                            {gem.title}
+                          </h4>
+                          <h6 class="font-weight-bold blue-text my-3">
+                            {gem.colour}
+                          </h6>
+                          <p class="font-weight-normal dark-grey-text">
+                            {gem.description}
+                          </p>
                         </div>
-                        <h4 class="font-weight-bold dark-grey-text mt-4">
-                          {gem.title}
-                        </h4>
-                        <h6 class="font-weight-bold blue-text my-3">
-                          {gem.colour}
-                        </h6>
-                        <p class="font-weight-normal dark-grey-text">
-                          {gem.description}
-                        </p>
-                      </div>
-                      <div class="card-footer">
-                        {new Date(gem.startTime).getTime() > Date.now() ? (
-                          <div>
-                            <lable>Start bit : {gem.startTime}</lable>
-                          </div>
-                        ) : (
-                          <div>
-                            {" "}
-                            <Row gutter={16}>
-                              <Col span={12}>
-                                <Countdown
-                                  title="Countdown"
-                                  value={deadline}
-                                  onFinish={onFinish}
-                                />
-                              </Col>
-                            </Row>
-                          </div>
-                        )}
-                      </div>
-                      <div class="card-footer">
-                        <a href="#" class="btn btn-primary">
-                          Max Bid :{Math.max(parseInt(gem.bid))}
-                        </a>
-                      </div>
-                      <div>
-                        {" "}
-                        <label>Add Bid</label>
-                        <Field
-                          name="addBid"
-                          placeholder="Add Bid"
-                          className="addBid"
-                        ></Field>
+                        <div class="card-footer">
+                          {new Date(gem.startTime).getTime() > Date.now() ? (
+                            <div>
+                              <lable>Start bit : {gem.startTime}</lable>
+                            </div>
+                          ) : (
+                            <div>
+                              {" "}
+                              <Row gutter={16}>
+                                <Col span={12}>
+                                  <Countdown
+                                    title="Countdown"
+                                    value={deadline}
+                                    onFinish={onFinish}
+                                  />
+                                </Col>
+                              </Row>
+                            </div>
+                          )}
+                        </div>
+                        <div class="card-footer">
+                          <a href="#" class="btn btn-primary">
+                            Max Bid :{Math.max(parseInt(gem.bid))}
+                          </a>
+                        </div>
                         <div>
                           {" "}
-                          <button
-                            className="btn btn-info mt-3 "
-                            onClick={(e) => {
-                              e.preventDefault();
-                              // setBid([...bid, parseInt(values.addBid)]);
-                              console.log(id);
-                              console.log(values.addBid);
+                          <label>
+                            <center>
+                              <h3>Add Bid</h3>
+                            </center>
+                          </label>
+                          <Field
+                            name="addBid"
+                            placeholder="Add Bid"
+                            className="addBid"
+                          ></Field>
+                          <div>
+                            {" "}
+                            <button
+                              className="btn btn-info mt-3 "
+                              onClick={(e) => {
+                                e.preventDefault();
+                                // setBid([...bid, parseInt(values.addBid)]);
+                                console.log(id);
+                                console.log(values.addBid);
 
-                              if (gem.bid > values.addBid) {
-                                alert("Your value is low cost");
-                              } else {
-                                axios
-                                  .post("http://localhost:3000/addBid", {
-                                    userId: userId,
-                                    bid: values.addBid,
-                                    gid: id,
-                                  })
+                                if (gem.bid > values.addBid) {
+                                  alert("Your value is low cost");
+                                } else {
+                                  axios
+                                    .post("http://localhost:3000/addBid", {
+                                      userId: userId,
+                                      bid: values.addBid,
+                                      gid: id,
+                                    })
 
-                                  .then((res) => {
-                                    console.log(res.data);
-                                  });
-                                window.location = `/addBid/${id}`;
-                              }
+                                    .then((res) => {
+                                      console.log(res.data);
+                                    });
+                                  window.location = `/addBid/${id}`;
+                                }
 
-                              //
-                            }}
-                          >
-                            Add
-                          </button>
+                                //
+                              }}
+                            >
+                              <h4>Add Bid </h4>
+                            </button>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  );
-                }
-              })}
-            </Form>
+                    );
+                  }
+                })}
+              </Form>
+            </center>
           )}
         </Formik>
 
@@ -211,7 +217,7 @@ const AddBid = () => {
                         <div class="card-footer">
                           {new Date(gem.startTime).getTime() > Date.now() ? (
                             <div>
-                              <lable>Start bit : {gem.startTime}</lable>
+                              <lable>Start bid : {gem.startTime}</lable>
                             </div>
                           ) : (
                             <div>

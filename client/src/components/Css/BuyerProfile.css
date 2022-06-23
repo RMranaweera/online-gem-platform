@@ -1,0 +1,47 @@
+.form-box {
+  background-color: #676165;
+  min-width: 80%;
+  height: 90vh;
+  border: dotted #20211e 1vw;
+  /* border: 1px solid red; */
+  margin: 0vw;
+  padding: 5vw;
+  position: relative;
+  /* position:relative for .prevBtn and .nextBtn position:absolute; */
+}
+
+.form-box h5 {
+  font-size: 35px;
+  text-align: center;
+  color: #0025f5;
+  margin: 0 0 0.5vh 0;
+}
+.form-box label {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  margin: 0 0 2vh 0;
+}
+.form-box input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.8rem 0.5rem 0.8rem;
+  margin: 0.9vw 0;
+  border: 0;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.form-box textarea {
+  height: 15vh;
+}
+.submitBtn {
+  margin-left: 50%;
+  border: #00c8f5 100vw;
+  background-color: aqua;
+  border-radius: 5px;
+  font-size: 30px;
+
+  display: inline-block;
+}
