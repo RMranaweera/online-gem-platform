@@ -47,11 +47,12 @@ function GbaProfile() {
                     placeholder="Gem Bureau Agent ID scanned copy"
                     filename="file"
                     onChange={onChangeFile}
+                    class="custom-file-input"
                   />
             </div>
           </div>
 
-          <button type="submit" id="submitBtn" className="submitBtn">
+          <button type="submit" id="submitBtn" className="Update-submitBtn">
             {" "}
             Update
           </button>

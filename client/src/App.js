@@ -23,6 +23,7 @@ import SellerDetailschart from "./components/SellerDetailschart";
 import GbaDashboard from "./components/GbaDashboard";
 import GbaProfile from "./components/GbaProfile";
 import Feedback from "./components/Feedback";
+import LandingPage from "./components/LandingPage";
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
 
         <Routes>
           {/* <Route exact path="/home" element={<Home />} /> */}
+          <Route exact path="/" element={<LandingPage/>} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/register" element={<Register />} />
           <Route exact path="/profile" element={<Profile />} />
