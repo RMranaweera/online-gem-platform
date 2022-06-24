@@ -8,6 +8,7 @@ import axios from "axios";
 import { Col, Row, Statistic } from "antd";
 import NavBar from "./Navbar/Nav";
 
+
 const { Countdown } = Statistic;
 function Content() {
   const [gemData, SetGemData] = useState([]);
@@ -41,7 +42,7 @@ function Content() {
   };
   return (
     <div>
-      <NavBar />
+      <NavBar/>
       <section class="search">
         {" "}
         <Space direction="vertical">
