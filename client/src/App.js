@@ -25,6 +25,12 @@ import GbaProfile from "./components/GbaProfile";
 import Feedback from "./components/Feedback";
 import LandingPage from "./components/LandingPage";
 
+// admin pages
+import Buyer from "./components/Admin/Buyer"
+import Driver from "./components/Admin/Driver"
+import GBAgent from "./components/Admin/GBAgent"
+import Seller from "./components/Admin/Seller"
+
 const App = () => {
   return (
     <>
@@ -42,9 +48,13 @@ const App = () => {
           <Route path="/addBid/:id" element={<AddBid />} />
           <Route path="/home" element={<Content />} />
           <Route path="/addGem" element={<AddGem />} />
+
           <Route path="/adminBoard" element={<AdminBoard/>}/>
+          <Route path="/buyer" element = {<Buyer/>}/>
+          <Route path="/seller" element = {<Seller/>}/>
+          <Route path="/driver" element = {<Driver/>}/>
+          <Route path="/gbAgent" element = {<GBAgent/>}/>
           {/* <Route path="/dash" element={<dash/>} /> */}
-          <Route path="/adminBoard" element={<AdminBoard />} />
           <Route path="/buyerDashboard" element={<BuyerDashboar />} />
           <Route path="/tablechart" element={<Tablechart />} />
           <Route path="/BuyerProfile" element={<BuyerProfile />} />

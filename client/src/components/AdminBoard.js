@@ -1,6 +1,5 @@
 import React from 'react'
 import NavBar from './Navbar/Nav'
-import SideBar from "./AppSidebar"
 import SideNavBar from "./SideBar/SideNavbar"
 function AdminBoard() {
   return (
@@ -8,6 +7,7 @@ function AdminBoard() {
       <NavBar/>
       <div className='sideNavBar-container'>
       <SideNavBar/>
+      <h1>This is admin Dashboard</h1>
       </div>
    
       
