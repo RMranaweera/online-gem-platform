@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Routes, Route} from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
-
-
+import SideNavBar from "./components/SideBar/SideNavbar";
+import AuthService from "./services/auth.service";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Home from "./components/Home";
@@ -16,12 +16,15 @@ import AddBid from "./components/AddBid";
 import Content from "./components/Content";
 import AddGem from "./components/AddGem";
 import AdminBoard from "./components/AdminBoard";
+import Tablechart from "./components/Tablechart";
+import BuyerDashboar from "./components/BuyerDashboar";
+import BuyerProfile from "./components/BuyerProfile";
+import Feedback from "./components/Feedback";
 
 const App = () => {
-
-
   return (
-    <div>
+    <>
+      <div>
         <Routes>
           {/* <Route exact path="/home" element={<Home />} /> */}
           <Route exact path="/login" element={<Login />} />
@@ -33,13 +36,16 @@ const App = () => {
           <Route path="/addBid/:id" element={<AddBid />} />
           <Route path="/home" element={<Content />} />
           <Route path="/addGem" element={<AddGem />} />
-<<<<<<< HEAD
-          <Route path="/dash" element={<dash/>} />
-=======
-          <Route path="/adminBoard" element={<AdminBoard/>}/>
->>>>>>> 8c120fbe1b213220bee1d6776035fc1a78f6466b
+          {/* <Route path="/dash" element={<dash/>} /> */}
+          <Route path="/adminBoard" element={<AdminBoard />} />
+          <Route path="/buyerDashboard" element={<BuyerDashboar />} />
+          <Route path="/tablechart" element={<Tablechart />} />
+          <Route path="/BuyerProfile" element={<BuyerProfile />} />
+          <Route path="/Feedback" element={<Feedback />} />
+          <Route path="/SideNavBar" element={<SideNavBar />} />
         </Routes>
-    </div>
+      </div>
+    </>
   );
 };
 

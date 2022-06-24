@@ -6,7 +6,7 @@ import AddGem from "./AddGem";
 import { Drawer } from "antd";
 import axios from "axios";
 import { Col, Row, Statistic } from "antd";
-import NavBar from "./Navbar/Nav"
+import NavBar from "./Navbar/Nav";
 
 const { Countdown } = Statistic;
 function Content() {
@@ -41,7 +41,7 @@ function Content() {
   };
   return (
     <div>
-      <NavBar/>
+      <NavBar />
       <section class="search">
         {" "}
         <Space direction="vertical">
@@ -49,7 +49,7 @@ function Content() {
             placeholder="input search text"
             onSearch={onSearch}
             style={{
-              width: 200,
+              width: 600,
             }}
           />{" "}
         </Space>
@@ -173,19 +173,30 @@ function Content() {
                       </div>
                     ) : (
                       <div>
-                        {" "}
-                        <Row gutter={16}>
-                          <Col span={12}>
-                            <Countdown
-                              title="Countdown"
-                              value={deadline}
-                              onFinish={onFinish}
-                            />
-                          </Col>
-                        </Row>
+                        {new Date(gem.endTime).getTime() < Date.now() ? (
+                          <div>
+                            <lable>
+                              <h2>Gem Sold</h2>
+                            </lable>
+                          </div>
+                        ) : (
+                          <div>
+                            {" "}
+                            <Row gutter={16}>
+                              <Col span={12}>
+                                <Countdown
+                                  title="Countdown"
+                                  value={deadline}
+                                  onFinish={onFinish}
+                                />
+                              </Col>
+                            </Row>
+                          </div>
+                        )}
                       </div>
                     )}
                   </div>
+
                   <div class="card-footer">
                     <a href="#" class="btn btn-primary">
                       Max Bid :{Math.max(parseInt(gem.bid))}
@@ -193,11 +204,11 @@ function Content() {
                   </div>
 
                   <div class="card-footer">
-                    Bid :{" "}
+                    Bid Soon :{" "}
                     <Link to={`/addBid/${gem._id}`}>
                       <button className="btn btn-info">
                         {" "}
-                        <span>Bid</span>
+                        <span>Hurry Up Bid Soon</span>
                       </button>
                     </Link>
                     <div className="mt-3">
@@ -218,8 +229,6 @@ function Content() {
                         {" "}
                         <a href={gem.documentPath}>
                           <button className="btn btn-primary">View</button>
-
-                          
                         </a>
                       </div>
                     </div>
