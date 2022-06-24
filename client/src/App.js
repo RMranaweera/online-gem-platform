@@ -19,6 +19,9 @@ import AdminBoard from "./components/AdminBoard";
 import Tablechart from "./components/Tablechart";
 import BuyerDashboar from "./components/BuyerDashboar";
 import BuyerProfile from "./components/BuyerProfile";
+import SellerDetailschart from "./components/SellerDetailschart";
+import GbaDashboard from "./components/GbaDashboard";
+import GbaProfile from "./components/GbaProfile";
 import Feedback from "./components/Feedback";
 
 const App = () => {
@@ -43,6 +46,9 @@ const App = () => {
           <Route path="/buyerDashboard" element={<BuyerDashboar />} />
           <Route path="/tablechart" element={<Tablechart />} />
           <Route path="/BuyerProfile" element={<BuyerProfile />} />
+          <Route path="/GbaDashboard" element={<GbaDashboard />} />
+          <Route path="/SellerDetailschart" element={<SellerDetailschart />} />
+          <Route path="/GbaProfile" element={<GbaProfile />} />
           <Route path="/Feedback" element={<Feedback />} />
           <Route path="/SideNavBar" element={<SideNavBar />} />
         </Routes>
