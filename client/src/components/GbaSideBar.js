@@ -61,7 +61,7 @@ const GbaSideBar = (props) => {
           </p>
           <p>
           </p>
-          <button type="submit" id="submitBtn" className="submitBtn">
+          <button type="submit" id="submitBtn" className="chat-submitBtn">
             {" "}
             Chat
           </button>

@@ -153,3 +153,13 @@
     }
   }
   
+  .chat-submitBtn{
+    margin-left: 30%;
+    width: 100px;
+    border: #00c8f5 100vw;
+    background-color: rgb(20, 63, 128);
+    border-radius: 5px;
+    font-size: 30px;
+  
+    display: inline-block;
+  }

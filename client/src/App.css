@@ -7,7 +7,7 @@ div.container {
 label {
   display: block;
   margin-top: 10px;
-  background-color: rgb(232, 232, 62);
+  /* background-color: rgb(232, 232, 62); */
 }
 
 .card-container.card {

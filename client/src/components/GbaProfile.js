@@ -27,7 +27,7 @@ function GbaProfile() {
           <div className="field1">
           <label>
               {" "}
-              <h2>Edit the Gem Bureau Agent's Profile</h2>{" "}
+              <h2 className="gba-header">Edit the Gem Bureau Agent's Profile</h2>{" "}
             </label>
             <div className="input_container">
             <input placeholder="First Name" />
