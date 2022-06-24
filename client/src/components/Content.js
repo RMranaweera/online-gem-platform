@@ -6,6 +6,8 @@ import AddGem from "./AddGem";
 import { Drawer } from "antd";
 import axios from "axios";
 import { Col, Row, Statistic } from "antd";
+import NavBar from "./Navbar/Nav"
+
 const { Countdown } = Statistic;
 function Content() {
   const [gemData, SetGemData] = useState([]);
@@ -39,6 +41,7 @@ function Content() {
   };
   return (
     <div>
+      <NavBar/>
       <section class="search">
         {" "}
         <Space direction="vertical">
@@ -133,7 +136,7 @@ function Content() {
           <div class="row text-center">
             <div class="col-sm-12 col-md-12 mb-4">
               <h3 class="text-center mt-4 text-secondary">
-                Hurry Up ! Bid Sooon ....!
+                Hurry Up ! Bid Soon ....!
               </h3>
             </div>
 

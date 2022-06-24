@@ -5,6 +5,7 @@ import CheckButton from "react-validation/build/button";
 import { isEmail } from "validator";
 
 import AuthService from "../services/auth.service";
+import NavBar from "./Navbar/Nav"
   
 
 function required(value) {
@@ -247,7 +248,10 @@ const Register = (props) => {
   };
   
   return (
-    <div className="col-md-12">
+    <div>
+      <NavBar/>
+    {/* <div className="col-md-12"> */}
+      
       <div className="card card-container">
       <p align="center"><b>Registration - Driver</b></p>
         <img
@@ -425,6 +429,7 @@ const Register = (props) => {
           <CheckButton style={{ display: "none" }} ref={checkBtn} />
         </Form>
       </div>
+    {/* </div> */}
     </div>
   );
 };
