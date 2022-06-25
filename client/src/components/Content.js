@@ -7,6 +7,10 @@ import { Drawer } from "antd";
 import axios from "axios";
 import { Col, Row, Statistic } from "antd";
 import NavBar from "./Navbar/Nav";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 83446743e42b82faee11d7561ed6c32e3655b0c7
 
 const { Countdown } = Statistic;
 function Content() {
@@ -41,7 +45,11 @@ function Content() {
   };
   return (
     <div>
+<<<<<<< HEAD
       <NavBar />
+=======
+      <NavBar/>
+>>>>>>> 83446743e42b82faee11d7561ed6c32e3655b0c7
       <section class="search">
         {" "}
         <Space direction="vertical">

@@ -19,12 +19,19 @@ import AdminBoard from "./components/AdminBoard";
 import Tablechart from "./components/Tablechart";
 import BuyerDashboar from "./components/BuyerDashboar";
 import BuyerProfile from "./components/BuyerProfile";
+import SellerDetailschart from "./components/SellerDetailschart";
+import GbaDashboard from "./components/GbaDashboard";
+import GbaProfile from "./components/GbaProfile";
 import Feedback from "./components/Feedback";
 
 const App = () => {
   return (
     <>
       <div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 83446743e42b82faee11d7561ed6c32e3655b0c7
         <Routes>
           {/* <Route exact path="/home" element={<Home />} /> */}
           <Route exact path="/login" element={<Login />} />
@@ -36,16 +43,27 @@ const App = () => {
           <Route path="/addBid/:id" element={<AddBid />} />
           <Route path="/home" element={<Content />} />
           <Route path="/addGem" element={<AddGem />} />
+<<<<<<< HEAD
+=======
+          <Route path="/adminBoard" element={<AdminBoard/>}/>
+>>>>>>> 83446743e42b82faee11d7561ed6c32e3655b0c7
           {/* <Route path="/dash" element={<dash/>} /> */}
           <Route path="/adminBoard" element={<AdminBoard />} />
           <Route path="/buyerDashboard" element={<BuyerDashboar />} />
           <Route path="/tablechart" element={<Tablechart />} />
           <Route path="/BuyerProfile" element={<BuyerProfile />} />
+          <Route path="/GbaDashboard" element={<GbaDashboard />} />
+          <Route path="/SellerDetailschart" element={<SellerDetailschart />} />
+          <Route path="/GbaProfile" element={<GbaProfile />} />
           <Route path="/Feedback" element={<Feedback />} />
           <Route path="/SideNavBar" element={<SideNavBar />} />
         </Routes>
       </div>
     </>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 83446743e42b82faee11d7561ed6c32e3655b0c7
   );
 };
 
