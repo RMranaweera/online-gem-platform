@@ -61,12 +61,12 @@ ul li {
 #BuyerSideBar {
   min-width: 250px;
   max-width: 550px;
-  background: #500da3;
+  background: #1d033a;
   color: rgb(255, 255, 255);
   transition: all 0.3s;
 }
 #BuyeSideBar .BuyerSideBar-header {
-  padding: 10px 0;
+  padding: 20px 0;
 }
 #BuyerSideBar.active {
   margin-right: 250px;

@@ -18,9 +18,7 @@ const BuyerSideBar = (props) => {
           <li>
             <NavLink to="/BuyerProfile">Profile</NavLink>
           </li>
-          <li>
-            <NavLink to="/Payement">Payment Details</NavLink>
-          </li>
+
           <li>
             <NavLink to="/Feedback">Feedback</NavLink>
           </li>

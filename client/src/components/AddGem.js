@@ -130,7 +130,7 @@ const AddGem = () => {
               <div className="mt-3">
                 <label>
                   {" "}
-                  <label>Bid</label>
+                  <label>Start Bid Price</label>
                 </label>
                 <Field name="bid" placeholder="Bid" className="bid"></Field>
               </div>
