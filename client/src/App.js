@@ -25,6 +25,10 @@ import GbaProfile from "./components/GbaProfile";
 import Feedback from "./components/Feedback";
 import LandingPage from "./components/LandingPage";
 
+//Seller
+import Sellerdashboard from "./components/sellerdashboard";
+import SellerProfile from "./components/SellerProfile";
+
 // admin pages
 import Buyer from "./components/Admin/Buyer"
 import Driver from "./components/Admin/Driver"
@@ -63,6 +67,9 @@ const App = () => {
           <Route path="/GbaProfile" element={<GbaProfile />} />
           <Route path="/Feedback" element={<Feedback />} />
           <Route path="/SideNavBar" element={<SideNavBar />} />
+
+          <Route path="/sellerdashboard" element={<Sellerdashboard />} />
+          <Route path="/sellerProfile" element={<SellerProfile />} />
         </Routes>
       </div>
     </>
